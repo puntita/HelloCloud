@@ -1,5 +1,5 @@
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy import Column, Integer, String, Datetime, Float
+from sqlalchemy import Column, Integer, String, DateTime, Float
 
 Base = declarative_base()
 
@@ -10,7 +10,7 @@ class Book(Base):
     title = Column(String)
     author = Column(String)
     pages = Column(Integer)
-    published = Column(Datetime)
+    published = Column(DateTime)
     price = Column(Float)
 
     def __repr__(self):

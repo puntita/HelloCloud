@@ -4,15 +4,15 @@ from contextlib import contextmanager
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
 import yaml
-from config import DATABASE_URI, f_yam
-from L05.Ex3models import Base, Book
+from configs import DATABASE_URI, f_yam
+from models import Base, Book
 
 engine = create_engine(DATABASE_URI)
 
 Session = sessionmaker(bind=engine)
 
 @contextmanager
-def session_cope():
+def session_scope():
     session = Session()
     try:
         yield session
@@ -27,22 +27,22 @@ def session_cope():
 
 def recreate_database():
     #Base.Metadata.create_all(engine)
-    Base.Metadata.create_all(engine)
+    Base.metadata.create_all(engine)
 
 
-def load_yam(fn):
+def load_yaml(fn):
     with session_scope() as s:
         for data in yaml.load_all(open(fn), Loader=yaml.FullLoader):
             bookyml = Book(**data)
             s.add(bookyml)
 
 
-if __name__ == '_main_':
+if __name__ == '__main__':
     recreate_database()
     #add_data()
 
     book = Book(
-        tital='Deep Learning',
+        title='Deep Learning',
         author='Ian Goodfellow',
         pages=775,
         published=datetime(2016, 11, 18),

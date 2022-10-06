@@ -1,12 +1,12 @@
 import sqlalchemy
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from L05.Ex3models import Base, User
+from models import Base, User
 
-engine = create_engine('sqlite:///user.db', echo=False)
+engine = create_engine('sqlite:///user.sqlite3', echo=False)
 
-# Base.mentadata.drop_all(engine)
-Base.mentadata.create_all(engine)
+# Base.metadata.drop_all(engine)
+Base.metadata.create_all(engine)
 
 Session =  sessionmaker(bind=engine)
 session = Session()
