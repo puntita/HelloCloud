@@ -60,18 +60,20 @@ Session = sessionmaker(bind=engine)
 session = Session()
 
 user1 = Students(
+    student_id ='6406022620088',
+    f_name='Puntita',
+    l_name='Chaungchawna',
+    e_mail ='6406022620088@kmutnb.ac.th'
+)
+
+
+user2 = Students(
     student_id ='6406022620070',
     f_name='Rawiporn',
     l_name='Suamsiri',
     e_mail ='6406022620070@kmutnb.ac.th'
 )
 
-user2 = Students(
-    student_id ='6406022620088',
-    f_name='Puntita',
-    l_name='Chaungchawna',
-    e_mail ='6406022620088@kmutnb.ac.th'
-)
 
 user3 = Students(
     student_id ='6406022620061',
@@ -81,7 +83,7 @@ user3 = Students(
 )
 
 regis1 = Registration(
-    student_id ='6406022620070',
+    student_id ='6406022620088',
     subject_id='060233113',
     year='2565',
     semester ='1',
@@ -89,7 +91,7 @@ regis1 = Registration(
 )
 
 regis11 = Registration(
-    student_id ='6406022620070',
+    student_id ='6406022620088',
     subject_id='060233201',
     year='2565',
     semester ='1',
@@ -97,7 +99,7 @@ regis11 = Registration(
 )
 
 regis2 = Registration(
-    student_id ='6406022620088',
+    student_id ='6406022620070',
     subject_id='060233113',
     year='2565',
     semester ='1',
@@ -105,7 +107,7 @@ regis2 = Registration(
 )
 
 regis22 = Registration(
-    student_id ='6406022620088',
+    student_id ='6406022620070',
     subject_id='060233201',
     year='2565',
     semester ='1',
@@ -117,7 +119,7 @@ regis3 = Registration(
     subject_id='060233113',
     year='2565',
     semester ='1',
-    grade = 'B'
+    grade = 'D'
 )
 
 regis33 = Registration(
