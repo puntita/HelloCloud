@@ -127,7 +127,7 @@ regis33 = Registration(
     subject_id='060233201',
     year='2565',
     semester ='1',
-    grade = 'C'
+    grade = 'C+'
 )
 sub1 = Subjects(subject_id ='060233113',subject_name='ADVANCED COMPUTER PROGRAMMIN',credit='3',teacher_id ='AMK')
 sub2 = Subjects(subject_id ='060233201',subject_name='NETWORK ENGINEERING LABORATO',credit='1',teacher_id ='WKN')
