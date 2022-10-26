@@ -4,7 +4,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, CHAR, VARCHAR, Integer, String, Text, DateTime, Float, Boolean, PickleType
 
 Base = declarative_base()
-db_uri = 'sqlite:///HW1.sqlite3'
+db_uri = 'sqlite:///work.sqlite3'
 engine = create_engine(db_uri, echo=False)
 
 class Students(Base):
