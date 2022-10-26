@@ -8,7 +8,7 @@ db_uri = 'sqlite:///HW1.sqlite3'
 engine = create_engine(db_uri, echo=False)
 
 class Students(Base):
-    _tablename_ = 'Students' 
+    __tablename__= 'Students' 
     student_id = Column(String(13),primary_key = True,nullable = True) 
     f_name = Column(String(30),nullable = False) 
     l_name = Column(String(30),nullable=False) 
@@ -19,7 +19,7 @@ class Students(Base):
         
 
 class Registration(Base):
-    _tablename_ = 'Registration' 
+    __tablename__ = 'Registration' 
     id = Column(Integer(), primary_key = True)
     student_id = Column(String(13)) 
     subject_id = Column(String(15),nullable = False) 
@@ -32,7 +32,7 @@ class Registration(Base):
             self.subject_id, self.year , self.semester, self.grade)
 
 class Subjects(Base):
-    _tablename_ = 'Subjects' 
+    __tablename__ = 'Subjects' 
     subject_id = Column(String(15),primary_key = True) 
     subject_name = Column(String(50),nullable = False) 
     credit = Column(Integer(),nullable=False) 
@@ -42,7 +42,7 @@ class Subjects(Base):
             self.subject_name, self.credit , self.teacher_id)
 
 class Teacher(Base):
-    _tablename_ = 'Teachers' 
+    __tablename__ = 'Teachers' 
     teacher_id = Column(String(3),primary_key=True, nullable=True)
     f_name = Column(String(50), nullable=True)
     l_name = Column(String(30), nullable=True)
