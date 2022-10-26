@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    c = sqlite3.connect('work.sqlite3')
+    c = sqlite3.connect('HW1.sqlite3')
     cur = c.cursor()
     # cur.execute("SELECT Students.student_id , Students.f_name ,Students.l_name , Subjects.sub_id FROM Students, Subjects")
     cur.execute("SELECT Students.student_id , Students.f_name ,Students.l_name\
@@ -20,8 +20,8 @@ def index():
         on Subjects.teacher_id = Teachers.teacher_id\
         ;")
     test = cur.fetchall()
-    return render_template("jane.html", test=test)
+    return render_template("index.html", test=test)
 
 
-if __name__ == "_main_":
+if __name__ == "__main__":
     app.run(host='0.0.0.0', port=80, debug=True)
