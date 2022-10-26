@@ -7,9 +7,9 @@
     <title>Document</title>
 </head>
 <body>
-        <h2><center>KMUTNB0088</center></h2>
+    <h2><center>KMUTNB0088</center></h2>
     <table border="1" width="100%" align="center">
-        <tr bgcolor="B0E0E6">
+        <tr bgcolor="#e1e9e8">
             <th>student-id</th>
             <th>student-f_name</th>
             <th>student-l_name</th>
@@ -19,62 +19,18 @@
             <th>teacher-f_name</th>
             <th>teacher-l_name</th>
         </tr>
+        {% for row in test %}
         <tr>
-            <td>6406022620088</td>
-            <td>Puntita</td>
-            <td>Chaungchawna</td>
-            <td>060233113</td>
-            <td>ADVANCED COMPUTER PROGRAMMIN</td>
-            <td>A</td>
-            <td>Anirach</td>
-            <td>Mingkhwan</td>
+          <td>{{ row[0] }}</td>
+          <td>{{ row[1] }}</td>
+          <td>{{ row[2] }}</td>
+          <td>{{ row[3] }}</td>
+          <td>{{ row[4] }}</td>
+          <td>{{ row[5] }}</td>
+          <td>{{ row[6] }}</td>
+          <td>{{ row[7] }}</td>
         </tr>
-        <tr>
-            <td>6406022620088</td>
-            <td>Puntita</td>
-            <td>Chaungchawna</td>
-            <td>060233201</td>
-            <td>NETWORK ENGINEERING LABORATO</td>
-            <td>C+</td>
-            <td>Watcharachai</td>
-            <td>Kongsiriwattana</td>
-        </tr> <tr>
-            <td>6406022620070</td>
-            <td>Rawiporn</td>
-            <td>Suamsiri</td>
-            <td>060233113</td>
-            <td>ADVANCED COMPUTER PROGRAMMIN</td>
-            <td>A</td>
-            <td>Anirach</td>
-            <td>Mingkhwan</td>
-        </tr> <tr>
-            <td>6406022620070</td>
-            <td>Rawiporn</td>
-            <td>Suamsiri</td>
-            <td>060233201</td>
-            <td>NETWORK ENGINEERING LABORATO</td>
-            <td>B+</td>
-            <td>Watcharachai</td>
-            <td>Kongsiriwattana</td>
-        </tr> <tr>
-            <td>6406022620061</td>
-            <td>Mathawee</td>
-            <td>Robkhob</td>
-            <td>060233113</td>
-            <td>ADVANCED COMPUTER PROGRAMMIN</td>
-            <td>D</td>
-            <td>Anirach</td>
-            <td>Mingkhwan</td>
-        </tr> <tr>
-            <td>6406022620061</td>
-            <td>Mathawee</td>
-            <td>Robkhob</td>
-            <td>060233201</td>
-            <td>NETWORK ENGINEERING LABORATO</td>
-            <td>C+</td>
-            <td>Watcharachai</td>
-            <td>Kongsiriwattana</td>
-        </tr>
-    </table>
+      {% endfor %}
+      </table>
 </body>
 </html>
