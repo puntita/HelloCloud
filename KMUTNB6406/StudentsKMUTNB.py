@@ -81,7 +81,7 @@ user3 = Students(
 )
 
 regis1 = Registration(
-    student_id ='6406022620070',
+    student_id ='6406022620088',
     subject_id='060233113',
     year='2565',
     semester ='1',
@@ -89,7 +89,7 @@ regis1 = Registration(
 )
 
 regis11 = Registration(
-    student_id ='6406022620070',
+    student_id ='6406022620088',
     subject_id='060233201',
     year='2565',
     semester ='1',
@@ -97,7 +97,7 @@ regis11 = Registration(
 )
 
 regis2 = Registration(
-    student_id ='6406022620088',
+    student_id ='6406022620070',
     subject_id='060233113',
     year='2565',
     semester ='1',
@@ -105,7 +105,7 @@ regis2 = Registration(
 )
 
 regis22 = Registration(
-    student_id ='6406022620088',
+    student_id ='6406022620070',
     subject_id='060233201',
     year='2565',
     semester ='1',
