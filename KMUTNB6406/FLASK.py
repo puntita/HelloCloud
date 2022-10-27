@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    c = sqlite3.connect('HW1.sqlite3')
+    c = sqlite3.connect('work.sqlite3')
     cur = c.cursor()
     # cur.execute("SELECT Students.student_id , Students.f_name ,Students.l_name , Subjects.sub_id FROM Students, Subjects")
     cur.execute("SELECT Students.student_id , Students.f_name ,Students.l_name\
