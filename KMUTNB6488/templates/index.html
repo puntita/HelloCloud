@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700&display=swap');
+
+    * {
+      font-family: 'Kanit', sans-serif;
+    }
+    
+    h2 {
+      font-weight: 600;
+    }
+
+    .trbg{
+      background-color: #00d0ec;
+    }
+
+    table {
+      text-align: center;
+      border-collapse: collapse;
+      border: 1px solid black;
+      font-weight: 400;
+      font-size: 16px;
+      width: 80%;
+    }
+
+  </style>
+    <h2><center>StudentsKMUTNB</center></h2>
+    <table border="1" align="center">
+        <tr class="trbg">
+            <th>student-id</th>
+            <th>student-f_name</th>
+            <th>student-l_name</th>
+            <th>E_mail</th>
+            <th>subject-id</th>
+            <th>subject-name</th>
+            <th>grade</th>
+            <th>teacher-f_name</th>
+            <th>teacher-l_name</th>
+        </tr>
+        {% for i in TEST %}
+        <tr>
+              <td>{{ i.student_id }}</td>
+              <td>{{ i.S_f_name }}</td>
+              <td>{{ i.S_l_name }}</td>
+              <td>{{ i.S_e_mail }}</td>
+              <td>{{ i.sub_id }}</td>
+              <td>{{ i.subject_name }}</td>
+              <td>{{ i.grade }}</td>
+              <td>{{ i.T_f_name }}</td>
+              <td>{{ i.T_l_name }}</td>
+        </tr>
+      {% endfor %}
+      </table>
+</body>
+</html>
