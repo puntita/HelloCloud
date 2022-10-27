@@ -1,5 +1,4 @@
-import imp
-from urllib import response
+ import response
 
 
 import requests
