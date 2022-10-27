@@ -2,10 +2,14 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, CHAR, VARCHAR, Integer, String, Text, DateTime, Float, Boolean, PickleType
+from flask import Flask 
 
+app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI']='postgresql://webadmin:LAInen57820@node37009-puntita.proen.app.ruk-com.cloud:11244/testdb'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 Base = declarative_base()
-db_uri = 'sqlite:///work.sqlite3'
 engine = create_engine(db_uri, echo=False)
+
 
 class Students(Base):
     __tablename__ = 'Students' 
