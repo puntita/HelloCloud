@@ -19,8 +19,6 @@ if __name__ == "main":
         threads.append(x)
         x.start()
 
-
-
     for index, thread in enumerate(threads):
         logging.info("Main   : create and start threads %d.", index)
         thread.join()
