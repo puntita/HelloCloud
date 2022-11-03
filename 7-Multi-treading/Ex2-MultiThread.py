@@ -7,8 +7,8 @@ def thread_function(name):
     time.sleep(2)
     logging.info("Thread %s: finishing", name)
 
-if __name__ == "main":
-    format = "%(astime)s: %(message)"
+if __name__ == "__main__":
+    format = "%(asctime)s: %(message)s"
     logging.basicConfig(format=format, level=logging.INFO,
                         datefmt="%H:%M:%S")
 
@@ -19,7 +19,8 @@ if __name__ == "main":
         threads.append(x)
         x.start()
 
+    
     for index, thread in enumerate(threads):
-        logging.info("Main   : create and start threads %d.", index)
-        thread.join()
-        logging.info("Main : finish threads %d done.", index)
+        logging.info("Main   :before joining thread %d", index)
+        thread.join
+        logging.info("Main   :thread %d done", index) 
